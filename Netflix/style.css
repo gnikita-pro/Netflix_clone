@@ -1,0 +1,374 @@
+*{
+    margin:0 ;
+    padding:0;
+    font-family:'Poppins', sans-serif;            /*idk*/
+    box sizing:border box;                        /*idk*/
+
+}
+body {
+    background: #000;
+    color: #fff;                               /*font color*/
+}
+
+
+ /*--------------------------------------------Header disigning--------------------------------------------*/
+
+.header{                                          /*Background designing*/           
+    width: 100%;
+    height: 100vh;         /*vh - height of view port*/
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png) ;         /*rgba stands for "red, green, blue, alpha." It is a way to define colors in CSS, where the alpha value represents the opacity or transparency of the color. The alpha value ranges from 0 (completely transparent) to 1 (completely opaque).                                                                                        (0,0,0,0.7) represents a semi-transparent black color. The first three values (0,0,0) specify the RGB values for black, and the last value (0.7) represents the alpha value, indicating that the color is 70% opaque.*/
+    background-size: cover;                           /*ful screen*/
+    background-position: center;
+    padding: 0px 0%;               /*padding matlab screen ke bahar kitna jaayega? 10 pixel from top and bottom and 8% from left and right*/
+    position: relative;
+}
+
+
+nav{                                              /*Aligning logo, and buttons*/
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+    padding: 30px 5%;                           /*30px- upar neeche ki spacing ke liye , 5%- right left ki spacing ke liye*/
+}
+
+.logo{ 
+    width: 100px;
+    cursor: pointer;
+}
+
+
+
+.languagebutton{
+    
+
+      display: inline-block;            /*This property is commonly used when you want to create elements that need to be positioned inline but still require block-level properties.*/
+      padding: 7px 2.25px;
+      font-size: 12px;
+      text-align: center;
+      text-decoration: none;
+      background-color: transparent;
+      color: white;
+      border: 1px solid white; /* Added white border */
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 5px;      /*signin and english ke beech ka space*/
+}
+
+.earth{
+    width: 12px;
+    margin-right:10px ;
+    
+}
+
+
+.down{
+    width:10px;
+    margin-left :10px;
+}
+
+.signinbutton{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.header-content{
+    position: absolute;                   /*Remember, the position: absolute; property allows you to place an element anywhere on the page independently, and you can further adjust its position using the top, bottom, left, and right properties.*/
+    top: 50%;                             /*top: 50%; left: 50%; sets the initial position of the element's top-left corner to the center, and transform: translate(-50%, -50%); adjusts the position of the element's content on center .  */
+    left: 50%;
+    transform: translate(-50%, -50%);     /*To center the entire element, including its content, the transform: translate(-50%, -50%); is applied. This transformation moves the element 50% of its own width to the left (X-axis) and 50% of its own height upwards (Y-axis) in relation to its initial position.*/
+    text-align: centre;
+    margin-top: 100px;                    /*margin-top: 100px; specifies a 100-pixel gap above the element, providing space or separation from elements above it.*/
+}
+
+
+.header-content h1{
+    font-weight: 600;                      /*boldness*/
+    font-size: 60px;
+    line-height:70px;
+    max-width: 650px;
+
+}
+
+.header-content h3{
+    font-weight: 400;                   
+    margin-bottom: 20px;                   /*provide space at bottom*/
+}
+
+
+.email-signup{
+     background: #fff;
+     display: flex;                       /*display: flex; is used to create a flexible box layout for elements. It allows you to control the arrangement and alignment of elements inside a container. (When you set display: flex; on the tray, the objects on the tray will become flexible items that can be easily arranged and aligned.),    By default, flex items will be positioned horizontally in a row.  */
+     align-items: center;
+     margin-top: 20px;                    /*provide space at Top*/
+     border-radius: 4px;
+     overflow: hidden;                    /*This line ensures that any content overflowing the boundaries of the .email-signup element is hidden. It prevents content from protruding outside the element's defined area.*/
+
+}
+
+.email-signup input{
+    flex: 1 ;                            /*This means that the input field will grow and expand to fill any available space within the container.*/
+    border: 0;
+    outline: 0;
+    margin-left: 10px;                   /*email address likhne ka margin*/
+}
+
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px
+}
+
+
+ /*-------------------------------------Feature styling------------------------------------------------------*/
+
+.features{
+    padding: 50px 12%;
+    font-size: 15px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: centre;
+    flex-wrap: wrap;
+    padding:50px 0%;  
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+
+.img-col{
+    flex-basis: 50%;                    /* it sets the width of the element to be 50% of the available space.*/
+    margin-bottom: 20px;                
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+    font-size:40px ;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+
+/*-------------------------------------FAQ------------------------------------------------------*/
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size:40px
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight:500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+label::after{                                    /* adding "+" at the end of each box*/
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transform: transform 0.2s ;                /* "+" transformation when we tap*/
+}
+
+
+input[type= "radio"]{                      /*to remove the radio sign (.)*/
+    display: none; 
+}
+
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;                              /*to hide the content*/
+    transition: max-height 0.5s, padding 0.5s;     /*transition with increase in height when tap on ques. */
+
+}
+
+
+.accordion input[type="radio"]:checked + label + .content{                  /*content show after tapping on ques. feature*/
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+
+.accordion input[type="radio"]:checked + label::after{                   /* "+" transformation when we tap*/
+    transform: rotate(135deg);
+}
+
+
+/*-------------------------------------Email-signup------------------------------------------------------*/
+
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small{
+    font-size: 15px;
+}
+
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;       /*border at the top of footer*/
+    color: #777;
+}
+
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{                      /*designing each link*/
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom:10px ;
+}
+
+
+/*----------media-queries-for-small-screen-----------*/
+
+@media only screen and (max-width: 600px){              /*valid for max width=600px*/
+    .logo{
+        width: 100px;
+    }
+
+    nav button{
+        padding: 5px 10px;
+
+    }
+
+    nav .languagebutton{
+        padding: 4px 8px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1{
+        font-size: 30px;
+    }
+
+    .email-signup button{
+        font-size: 12px;
+        padding: 10px 15px; 
+    }
+
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+
+    .features h2{
+        font-size: 30px;
+    }
+
+    .features p{
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4){                            /*for making alternate image and text*/
+        flex-direction: column-reverse;
+    }
+    
+    .features .row{                                                 /*space between each row of text-images*/
+        padding: 10px 0;
+    }
+
+    .faq h2{
+        font-size: 20px;
+    }
+
+    .accordion .content{
+        font-size: 14px;
+    }
+
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    label::after{                           /*to minimise the "+" icon*/
+        font-size :22px;
+    }
+
+
+     
+}
